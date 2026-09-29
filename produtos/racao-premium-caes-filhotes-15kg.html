@@ -25,45 +25,43 @@
 <body>
   <a class="u-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="cabecalho sticky-top">
-    <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principal">
-      <div class="container-xl">
-        <a class="navbar-brand cabecalho__marca py-0" href="../index.html"><img src="../imagens/logo-itapets.png"
-            alt="ItaPets — página inicial" width="400" height="214"></a>
-        <div class="d-flex align-items-center gap-1 order-lg-last">
-          <a class="cabecalho__icone" href="#comprar"><img src="../imagens/carrinho-compras.png"
-              alt="Carrinho de compras" width="100" height="100"></a>
-          <a class="cabecalho__icone" href="#comprar"><img src="../imagens/favoritos.png" alt="Favoritos" width="100"
-              height="100"></a>
-          <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
-            aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
-            <span class="navbar-toggler-icon"></span>
+  <header class="cabecalho sticky-top navbar navbar-expand-lg align-items-start py-2">
+    <nav class="container-xl" aria-label="Menu principal">
+      <a class="navbar-brand cabecalho__marca py-0" href="../index.html"><img src="../imagens/logo-itapets.png"
+          alt="ItaPets — página inicial" width="400" height="214"></a>
+      <div class="d-flex align-items-center gap-1 order-lg-last">
+        <a class="cabecalho__icone" href="#comprar"><img src="../imagens/carrinho-compras.png"
+            alt="Carrinho de compras" width="100" height="100"></a>
+        <a class="cabecalho__icone" href="#comprar"><img src="../imagens/favoritos.png" alt="Favoritos" width="100"
+            height="100"></a>
+        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+          aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu-principal">
+        <ul class="navbar-nav ms-lg-4 me-lg-auto py-3 py-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="../produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contato.html">Fale Conosco</a>
+          </li>
+        </ul>
+        <form class="busca mb-3 mb-lg-0 me-lg-3" role="search" action="../produtos.html">
+          <input class="busca__campo" type="search" name="busca" placeholder="Buscar produtos..."
+            aria-label="Buscar produtos">
+          <button class="busca__botao" type="submit" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
           </button>
-        </div>
-        <div class="collapse navbar-collapse" id="menu-principal">
-          <ul class="navbar-nav ms-lg-4 me-lg-auto py-3 py-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="../produtos.html">Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contato.html">Fale Conosco</a>
-            </li>
-          </ul>
-          <form class="busca mb-3 mb-lg-0 me-lg-3" role="search" action="../produtos.html">
-            <input class="busca__campo" type="search" name="busca" placeholder="Buscar produtos..."
-              aria-label="Buscar produtos">
-            <button class="busca__botao" type="submit" aria-label="Buscar">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" aria-hidden="true">
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </button>
-          </form>
-        </div>
+        </form>
       </div>
     </nav>
   </header>
@@ -144,51 +142,43 @@
               <label class="btn btn--azul flex-grow-1" for="add-carrinho"><span class="u-texto-inativo">Adicionar ao
                   Carrinho</span><span class="u-texto-ativo">Adicionado ✓</span></label>
             </div>
-            <div class="row g-2">
-              <div class="col-sm-6">
-                <input type="checkbox" class="btn-check" id="favoritar">
-                <label class="btn btn--contorno w-100" for="favoritar"><span class="u-texto-inativo">♡
-                    Favoritar</span><span class="u-texto-ativo">♥ Favoritado</span></label>
-              </div>
-              <div class="col-sm-6">
-                <button class="btn btn--laranja w-100" type="button">
-                  Comprar Agora
-                </button>
-              </div>
+            <div class="produto__acoes">
+              <input type="checkbox" class="btn-check" id="favoritar">
+              <label class="btn btn--contorno w-100" for="favoritar"><span class="u-texto-inativo">♡
+                  Favoritar</span><span class="u-texto-ativo">♥ Favoritado</span></label>
+              <button class="btn btn--laranja w-100" type="button">
+                Comprar Agora
+              </button>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="row g-4 mt-2 mt-lg-4">
-        <section class="col-lg-6">
-          <div class="u-cartao h-100 p-4">
-            <h2 class="h4 mb-3">Especificações</h2>
-            <dl class="ficha">
-              <dt class="ficha__termo">Marca</dt>
-              <dd class="ficha__valor">Quatree Gourmet</dd>
-              <dt class="ficha__termo">Indicação</dt>
-              <dd class="ficha__valor">Cães Filhotes</dd>
-              <dt class="ficha__termo">Porte</dt>
-              <dd class="ficha__valor">Pequeno</dd>
-              <dt class="ficha__termo">Sabor</dt>
-              <dd class="ficha__valor">Carne e Frango</dd>
-              <dt class="ficha__termo">Peso</dt>
-              <dd class="ficha__valor">15kg</dd>
-              <dt class="ficha__termo">Livre de corantes artificiais</dt>
-              <dd class="ficha__valor">Sim</dd>
-            </dl>
-          </div>
+      <div class="produto__detalhes">
+        <section class="u-cartao p-4">
+          <h2 class="h4 mb-3">Especificações</h2>
+          <dl class="ficha">
+            <dt class="ficha__termo">Marca</dt>
+            <dd class="ficha__valor">Quatree Gourmet</dd>
+            <dt class="ficha__termo">Indicação</dt>
+            <dd class="ficha__valor">Cães Filhotes</dd>
+            <dt class="ficha__termo">Porte</dt>
+            <dd class="ficha__valor">Pequeno</dd>
+            <dt class="ficha__termo">Sabor</dt>
+            <dd class="ficha__valor">Carne e Frango</dd>
+            <dt class="ficha__termo">Peso</dt>
+            <dd class="ficha__valor">15kg</dd>
+            <dt class="ficha__termo">Livre de corantes artificiais</dt>
+            <dd class="ficha__valor">Sim</dd>
+          </dl>
         </section>
-        <section class="col-lg-6">
-          <div class="u-cartao h-100 p-4">
-            <h2 class="h4 mb-3">Descrição</h2>
-            <p class="mb-0 lh-lg">
-              Ração Quatree Gourmet para cães filhotes de porte pequeno, sabor
-              carne e frango. Livre de corantes artificiais, em embalagem de
-              15kg.
-            </p>
-          </div>
+        <section class="u-cartao p-4">
+          <h2 class="h4 mb-3">Descrição</h2>
+          <p class="mb-0 lh-lg">
+            Ração Quatree Gourmet para cães filhotes de porte pequeno, sabor
+            carne e frango. Livre de corantes artificiais, em embalagem de
+            15kg.
+          </p>
         </section>
       </div>
     </article>
@@ -197,7 +187,7 @@
   <footer class="rodape">
     <div class="container-xl">
       <nav class="row g-4" aria-label="Links do rodapé">
-        <div class="col-6 col-md-3">
+        <section class="col-6 col-md-3">
           <h2 class="rodape__titulo">Informações</h2>
           <ul class="u-lista-limpa">
             <li class="rodape__item">
@@ -213,8 +203,8 @@
               <a class="rodape__link" href="../contato.html">Fale Conosco</a>
             </li>
           </ul>
-        </div>
-        <div class="col-6 col-md-3">
+        </section>
+        <section class="col-6 col-md-3">
           <h2 class="rodape__titulo">Categorias</h2>
           <ul class="u-lista-limpa">
             <li class="rodape__item">
@@ -230,8 +220,8 @@
               <a class="rodape__link" href="../produtos.html#petiscos">Petiscos</a>
             </li>
           </ul>
-        </div>
-        <div class="col-6 col-md-3">
+        </section>
+        <section class="col-6 col-md-3">
           <h2 class="rodape__titulo">Produtos</h2>
           <ul class="u-lista-limpa">
             <li class="rodape__item">
@@ -247,8 +237,8 @@
               <a class="rodape__link" href="../produtos.html#comedouros">Comedouros</a>
             </li>
           </ul>
-        </div>
-        <div class="col-6 col-md-3">
+        </section>
+        <section class="col-6 col-md-3">
           <h2 class="rodape__titulo">Minha Conta</h2>
           <ul class="u-lista-limpa">
             <li class="rodape__item">
@@ -261,25 +251,25 @@
               <a class="rodape__link" href="../produtos.html">Favoritos</a>
             </li>
           </ul>
-          <div class="d-flex gap-3 mt-3">
-            <a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22" height="22"
-                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-              </svg></a>
-            <a class="rodape__social" href="https://www.instagram.com/" aria-label="Instagram"><svg width="22"
-                height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg></a>
-            <a class="rodape__social" href="https://www.youtube.com/" aria-label="YouTube"><svg width="22" height="22"
-                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.930-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg></a>
-          </div>
-        </div>
+          <ul class="d-flex gap-3 mt-3 u-lista-limpa">
+            <li><a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22" height="22"
+                  viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg></a></li>
+            <li><a class="rodape__social" href="https://www.instagram.com/" aria-label="Instagram"><svg width="22"
+                  height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                </svg></a></li>
+            <li><a class="rodape__social" href="https://www.youtube.com/" aria-label="YouTube"><svg width="22" height="22"
+                  viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.930-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg></a></li>
+          </ul>
+        </section>
       </nav>
       <p class="rodape__base mb-0">
         &copy; 2026 ItaPets. Todos os direitos reservados.

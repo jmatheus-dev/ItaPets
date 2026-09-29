@@ -935,6 +935,31 @@ textarea:focus-visible {
   text-align: center;
 }
 
+.produto__acoes {
+  display: grid;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .produto__acoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.produto__detalhes {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 992px) {
+  .produto__detalhes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 3rem;
+  }
+}
+
 .ficha {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr);
@@ -966,8 +991,19 @@ textarea:focus-visible {
   }
 }
 
+.contato {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .contato {
+    /* mesma largura do antigo col-lg-5 / col-lg-7 com g-4 */
+    grid-template-columns: calc((100% + 1.5rem) * 5 / 12 - 1.5rem) minmax(0, 1fr);
+  }
+}
+
 .contato__info {
-  height: 100%;
   padding: clamp(24px, 5vw, 48px);
   border-radius: 24px;
   background-color: var(--cor-azul);
