@@ -442,7 +442,9 @@ textarea:focus-visible {
   margin-top: clamp(48px, 8vw, 80px);
   padding-top: clamp(40px, 6vw, 60px);
   padding-bottom: 20px;
-  border-image: conic-gradient(var(--cor-azul) 0 0) fill 0 / 0 100vmax / 0;
+  border-image-source: conic-gradient(var(--cor-azul) 0 0);
+  border-image-slice: 0 fill;
+  border-image-outset: 0 100vmax;
 }
 
 .rodape__nav {
