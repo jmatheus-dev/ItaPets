@@ -23,12 +23,19 @@ Site institucional de um petshop, desenvolvido com HTML e CSS. O projeto apresen
 
 ```
 ItaPets/
-├── imagens/          # Imagens gerais do site
-├── produtos/         # Imagens dos produtos
-├── index.html        # Página inicial
-├── produtos.html     # Página de produtos
-├── contato.html      # Página de contato
-├── style.css         # Folha de estilos
+├── css/
+│   └── style.css         # Folha de estilos
+├── imagens/
+│   ├── categorias/       # Ícones das categorias da página inicial
+│   ├── favicon/          # Ícones do site (aba do navegador e atalho no celular)
+│   ├── icones/           # Ícones do cabeçalho (carrinho e favoritos)
+│   ├── produtos/         # Fotos dos produtos (normal e miniatura)
+│   ├── banner-pets.webp  # Ilustração do banner
+│   └── logo-itapets.webp # Logo da loja
+├── produtos/             # Página de cada produto
+├── index.html            # Página inicial
+├── produtos.html         # Catálogo de produtos
+├── contato.html          # Página de contato
 └── README.md
 ```
 

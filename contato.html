@@ -8,15 +8,15 @@
   <meta name="description"
     content="Fale com a ItaPets: tire suas dúvidas, envie sugestões ou peça ajuda com o seu pedido.">
   <meta name="theme-color" content="#d7f0fa">
-  <link rel="icon" href="imagens/icone-site.ico" sizes="16x16 32x32 48x48">
-  <link rel="icon" type="image/png" href="imagens/icone-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png">
+  <link rel="icon" href="imagens/favicon/icone-site.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="imagens/favicon/icone-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="imagens/favicon/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
     defer></script>
@@ -27,48 +27,45 @@
 
   <header class="cabecalho sticky-top navbar navbar-expand-lg align-items-start py-2">
     <nav class="container-xl" aria-label="Menu principal">
-      <a class="navbar-brand cabecalho__marca py-0" href="index.html"><img src="imagens/logo-itapets.png"
-          alt="ItaPets — página inicial" width="400" height="214"></a>
-      <div class="d-flex align-items-center gap-1 order-lg-last">
-        <a class="cabecalho__icone" href="produtos.html"><img src="imagens/carrinho-compras.png"
-            alt="Carrinho de compras" width="100" height="100"></a>
-        <a class="cabecalho__icone" href="produtos.html"><img src="imagens/favoritos.png" alt="Favoritos" width="100"
-            height="100"></a>
-        <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
-          aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
-          <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand cabecalho__marca py-0" href="index.html"><img src="imagens/logo-itapets.webp"
+          alt="ItaPets — página inicial"></a>
+      <a class="cabecalho__icone ms-auto order-lg-last" href="produtos.html"><img
+          src="imagens/icones/carrinho-compras.webp" alt="Carrinho de compras"></a>
+      <a class="cabecalho__icone ms-1 order-lg-last" href="produtos.html"><img src="imagens/icones/favoritos.webp"
+          alt="Favoritos"></a>
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target=".cabecalho__menu"
+        aria-controls="menu-principal busca-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="cabecalho__menu navbar-nav collapse navbar-collapse align-items-stretch ms-lg-4 py-3 py-lg-0"
+        id="menu-principal">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="contato.html">Fale Conosco</a>
+        </li>
+      </ul>
+      <form class="cabecalho__menu busca collapse navbar-collapse mb-3 mb-lg-0 me-lg-3" id="busca-principal"
+        role="search" action="produtos.html">
+        <input class="busca__campo" type="search" name="busca" placeholder="Buscar produtos..."
+          aria-label="Buscar produtos">
+        <button class="busca__botao" type="submit" aria-label="Buscar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
         </button>
-      </div>
-      <div class="collapse navbar-collapse" id="menu-principal">
-        <ul class="navbar-nav ms-lg-4 me-lg-auto py-3 py-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="produtos.html">Produtos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="contato.html">Fale Conosco</a>
-          </li>
-        </ul>
-        <form class="busca mb-3 mb-lg-0 me-lg-3" role="search" action="produtos.html">
-          <input class="busca__campo" type="search" name="busca" placeholder="Buscar produtos..."
-            aria-label="Buscar produtos">
-          <button class="busca__botao" type="submit" aria-label="Buscar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </button>
-        </form>
-      </div>
+      </form>
     </nav>
   </header>
 
-  <main id="conteudo" tabindex="-1" class="container-xl py-4 py-md-5">
-    <div class="contato">
-      <section class="contato__info" aria-labelledby="contato-titulo">
+  <main id="conteudo" tabindex="-1" class="contato container-xl py-4 py-md-5">
+    <section class="contato__info" aria-labelledby="contato-titulo">
       <h1 class="mb-3" id="contato-titulo">Fale Conosco</h1>
       <p class="mb-4">
         Dúvidas sobre um pedido, sugestões ou só quer bater um papo sobre
@@ -77,148 +74,141 @@
       <address class="mb-0">
         <ul class="u-lista-limpa d-grid gap-3">
           <li class="d-flex gap-3">
-            <span class="contato__icone" aria-hidden="true">📍</span><span><strong
-                class="d-block">Endereço</strong>Itabaiana, Sergipe -
-              Brasil</span>
+            <span class="contato__icone" aria-hidden="true">📍</span>
+            <span><strong class="d-block">Endereço</strong>Itabaiana, Sergipe - Brasil</span>
           </li>
           <li class="d-flex gap-3">
-            <span class="contato__icone" aria-hidden="true">📞</span><span><strong
-                class="d-block">Telefone</strong><a href="tel:+5579900000000">(79) 90000-0000</a></span>
+            <span class="contato__icone" aria-hidden="true">📞</span>
+            <span><strong class="d-block">Telefone</strong><a href="tel:+5579900000000">(79) 90000-0000</a></span>
           </li>
           <li class="d-flex gap-3">
-            <span class="contato__icone" aria-hidden="true">✉️</span><span><strong class="d-block">E-mail</strong><a
-                class="text-break" href="mailto:contato@itapets.com.br">contato@itapets.com.br</a></span>
+            <span class="contato__icone" aria-hidden="true">✉️</span>
+            <span><strong class="d-block">E-mail</strong><a class="text-break"
+                href="mailto:contato@itapets.com.br">contato@itapets.com.br</a></span>
           </li>
           <li class="d-flex gap-3">
-            <span class="contato__icone" aria-hidden="true">🕒</span><span><strong
-                class="d-block">Horário</strong>Seg
-              a Sáb, 8h às
-              18h</span>
+            <span class="contato__icone" aria-hidden="true">🕒</span>
+            <span><strong class="d-block">Horário</strong>Seg a Sáb, 8h às 18h</span>
           </li>
         </ul>
       </address>
-      </section>
+    </section>
 
-      <form class="contato__form u-cartao d-grid gap-3" action="#" method="post"
-        aria-label="Formulário de contato">
-        <div>
-          <label class="form-label fw-semibold" for="nome">Nome</label>
-          <input class="form-control" type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome"
-            required>
-        </div>
-        <div>
-          <label class="form-label fw-semibold" for="email">E-mail</label>
-          <input class="form-control" type="email" id="email" name="email" autocomplete="email"
-            placeholder="seuemail@exemplo.com" required>
-        </div>
-        <div>
-          <label class="form-label fw-semibold" for="assunto">Assunto</label>
-          <input class="form-control" type="text" id="assunto" name="assunto"
-            placeholder="Sobre o que você quer falar?">
-        </div>
-        <div>
-          <label class="form-label fw-semibold" for="mensagem">Mensagem</label>
-          <textarea class="form-control" id="mensagem" name="mensagem" rows="5"
-            placeholder="Escreva sua mensagem aqui..." required></textarea>
-        </div>
-        <button class="btn btn--laranja btn-lg" type="submit">
-          Enviar Mensagem
-        </button>
-      </form>
-    </div>
+    <form class="contato__form u-cartao d-grid gap-3" action="#" method="post" aria-label="Formulário de contato">
+      <p class="mb-0">
+        <label class="form-label fw-semibold" for="nome">Nome</label>
+        <input class="form-control" type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome"
+          required>
+      </p>
+      <p class="mb-0">
+        <label class="form-label fw-semibold" for="email">E-mail</label>
+        <input class="form-control" type="email" id="email" name="email" autocomplete="email"
+          placeholder="seuemail@exemplo.com" required>
+      </p>
+      <p class="mb-0">
+        <label class="form-label fw-semibold" for="assunto">Assunto</label>
+        <input class="form-control" type="text" id="assunto" name="assunto" placeholder="Sobre o que você quer falar?">
+      </p>
+      <p class="mb-0">
+        <label class="form-label fw-semibold" for="mensagem">Mensagem</label>
+        <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+          required></textarea>
+      </p>
+      <button class="btn btn--laranja btn-lg" type="submit">
+        Enviar Mensagem
+      </button>
+    </form>
   </main>
 
-  <footer class="rodape">
-    <div class="container-xl">
-      <nav class="row g-4" aria-label="Links do rodapé">
-        <section class="col-6 col-md-3">
-          <h2 class="rodape__titulo">Informações</h2>
-          <ul class="u-lista-limpa">
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#caes">Cães</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="contato.html">Fale Conosco</a>
-            </li>
-          </ul>
-        </section>
-        <section class="col-6 col-md-3">
-          <h2 class="rodape__titulo">Categorias</h2>
-          <ul class="u-lista-limpa">
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#racoes">Rações</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#coleiras">Acessórios</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#petiscos">Petiscos</a>
-            </li>
-          </ul>
-        </section>
-        <section class="col-6 col-md-3">
-          <h2 class="rodape__titulo">Produtos</h2>
-          <ul class="u-lista-limpa">
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#caes">Cães</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#limpeza">Banho</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html#comedouros">Comedouros</a>
-            </li>
-          </ul>
-        </section>
-        <section class="col-6 col-md-3">
-          <h2 class="rodape__titulo">Minha Conta</h2>
-          <ul class="u-lista-limpa">
-            <li class="rodape__item">
-              <a class="rodape__link" href="contato.html">Ver meus pedidos</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="contato.html">Meu perfil</a>
-            </li>
-            <li class="rodape__item">
-              <a class="rodape__link" href="produtos.html">Favoritos</a>
-            </li>
-          </ul>
-          <ul class="d-flex gap-3 mt-3 u-lista-limpa">
-            <li><a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22" height="22"
-                  viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg></a></li>
-            <li><a class="rodape__social" href="https://www.instagram.com/" aria-label="Instagram"><svg width="22"
-                  height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                </svg></a></li>
-            <li><a class="rodape__social" href="https://www.youtube.com/" aria-label="YouTube"><svg width="22" height="22"
-                  viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg></a></li>
-          </ul>
-        </section>
-      </nav>
-      <p class="rodape__base mb-0">
-        &copy; 2026 ItaPets. Todos os direitos reservados.
-      </p>
-    </div>
+  <footer class="rodape container-xl">
+    <nav class="rodape__nav" aria-label="Links do rodapé">
+      <section>
+        <h2 class="rodape__titulo">Informações</h2>
+        <ul class="u-lista-limpa">
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#caes">Cães</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="contato.html">Fale Conosco</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="rodape__titulo">Categorias</h2>
+        <ul class="u-lista-limpa">
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#racoes">Rações</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#coleiras">Acessórios</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#petiscos">Petiscos</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="rodape__titulo">Produtos</h2>
+        <ul class="u-lista-limpa">
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#caes">Cães</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#limpeza">Banho</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#comedouros">Comedouros</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="rodape__titulo">Minha Conta</h2>
+        <ul class="u-lista-limpa">
+          <li class="rodape__item">
+            <a class="rodape__link" href="contato.html">Ver meus pedidos</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="contato.html">Meu perfil</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html">Favoritos</a>
+          </li>
+        </ul>
+        <ul class="d-flex gap-3 mt-3 u-lista-limpa">
+          <li><a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22"
+                height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a></li>
+          <li><a class="rodape__social" href="https://www.instagram.com/" aria-label="Instagram"><svg width="22"
+                height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg></a></li>
+          <li><a class="rodape__social" href="https://www.youtube.com/" aria-label="YouTube"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg></a></li>
+        </ul>
+      </section>
+    </nav>
+    <p class="rodape__base mb-0">
+      &copy; 2026 ItaPets. Todos os direitos reservados.
+    </p>
   </footer>
 </body>
 
