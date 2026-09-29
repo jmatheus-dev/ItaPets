@@ -528,6 +528,11 @@ textarea:focus-visible {
   .hero__imagem {
     width: min(70%, 240px);
   }
+
+  .hero__botao {
+    --bs-btn-font-size: 1rem;
+    --bs-btn-padding-y: 0.5rem;
+  }
 }
 
 .categorias__titulo {
