@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: #ffffff;
 }
 
@@ -59,7 +60,9 @@ svg {
 
 h1,
 h2,
-h3 {
+h3,
+.h4,
+.h5 {
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -100,10 +103,6 @@ textarea:focus-visible {
 .u-pular-conteudo:focus {
   top: 12px;
   color: #ffffff;
-}
-
-.u-fundo-azul-claro {
-  background-color: var(--cor-azul-claro);
 }
 
 .u-cartao {
@@ -297,7 +296,6 @@ textarea:focus-visible {
 .estrelas {
   --tamanho: 16px;
   display: inline-block;
-  width: calc(var(--tamanho) * 5);
   height: var(--tamanho);
   font-size: var(--tamanho);
   line-height: 1;
@@ -520,6 +518,16 @@ textarea:focus-visible {
   display: block;
   width: min(100%, 380px);
   margin: 0 auto;
+}
+
+@media (max-width: 575.98px) {
+  .hero__texto {
+    padding-bottom: 8px;
+  }
+
+  .hero__imagem {
+    width: min(70%, 240px);
+  }
 }
 
 .categorias__titulo {
@@ -984,4 +992,19 @@ textarea:focus-visible {
 .contato__form .form-control:focus {
   border-color: var(--cor-laranja);
   box-shadow: 0 0 0 0.2rem var(--bs-focus-ring-color);
+}
+
+/* Em telas de toque o :hover "gruda" depois do toque; desliga os efeitos de elevação */
+@media (hover: none) {
+  .btn--laranja:hover,
+  .btn--azul:hover,
+  .btn--branco:hover,
+  .produto-card:hover,
+  .categoria-card:hover,
+  .rodape__social:hover,
+  .galeria__miniatura:hover,
+  .produto-card:hover .produto-card__imagem img {
+    box-shadow: none;
+    transform: none;
+  }
 }

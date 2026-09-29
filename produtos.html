@@ -1,1003 +1,535 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Produtos — ItaPets</title>
-    <meta
-      name="description"
-      content="Produtos ItaPets: rações, petiscos, coleiras, comedouros e higiene para cães e gatos. Filtre por categoria, preço e marca."
-    />
-    <meta name="theme-color" content="#d7f0fa" />
-    <link rel="icon" href="imagens/icone-site.ico" sizes="16x16 32x32 48x48" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="imagens/icone-192.png"
-      sizes="192x192"
-    />
-    <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-      defer
-    ></script>
-  </head>
-  <body>
-    <a class="u-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="cabecalho sticky-top">
-      <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principal">
-        <div class="container-xl">
-          <a class="navbar-brand cabecalho__marca py-0" href="index.html"
-            ><img
-              src="imagens/logo-itapets.png"
-              alt="ItaPets — página inicial"
-              width="400"
-              height="214"
-          /></a>
-          <div class="d-flex align-items-center gap-1 order-lg-last">
-            <a class="cabecalho__icone" href="produtos.html"
-              ><img
-                src="imagens/carrinho-compras.png"
-                alt="Carrinho de compras"
-                width="100"
-                height="100"
-            /></a>
-            <a class="cabecalho__icone" href="produtos.html"
-              ><img
-                src="imagens/favoritos.png"
-                alt="Favoritos"
-                width="100"
-                height="100"
-            /></a>
-            <button
-              class="navbar-toggler ms-1"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#menu-principal"
-              aria-controls="menu-principal"
-              aria-expanded="false"
-              aria-label="Abrir menu"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="menu-principal">
-            <ul class="navbar-nav ms-lg-4 me-lg-auto py-3 py-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="produtos.html"
-                  >Produtos</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Fale Conosco</a>
-              </li>
-            </ul>
-            <form
-              class="busca mb-3 mb-lg-0 me-lg-3"
-              role="search"
-              action="produtos.html"
-            >
-              <input
-                class="busca__campo"
-                type="search"
-                name="busca"
-                placeholder="Buscar produtos..."
-                aria-label="Buscar produtos"
-              />
-              <button class="busca__botao" type="submit" aria-label="Buscar">
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="11" cy="11" r="8" />
-                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                </svg>
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos — ItaPets</title>
+  <meta name="description"
+    content="Produtos ItaPets: rações, petiscos, coleiras, comedouros e higiene para cães e gatos. Filtre por categoria, preço e marca.">
+  <meta name="theme-color" content="#d7f0fa">
+  <link rel="icon" href="imagens/icone-site.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="imagens/icone-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+</head>
 
-    <main id="conteudo" tabindex="-1" class="vitrine container-xl">
-      <span class="vitrine__alvo" id="caes"></span>
-      <span class="vitrine__alvo" id="gatos"></span>
-      <span class="vitrine__alvo" id="racoes"></span>
-      <span class="vitrine__alvo" id="petiscos"></span>
-      <span class="vitrine__alvo" id="coleiras"></span>
-      <span class="vitrine__alvo" id="comedouros"></span>
-      <span class="vitrine__alvo" id="higiene"></span>
-      <span class="vitrine__alvo" id="limpeza"></span>
+<body>
+  <a class="u-pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-      <nav aria-label="Você está em">
-        <ol class="breadcrumb small mb-2">
-          <li class="breadcrumb-item"><a href="index.html">Início</a></li>
-          <li class="breadcrumb-item"><a href="produtos.html">Produtos</a></li>
-          <li
-            class="breadcrumb-item vitrine__migalha fw-semibold"
-            aria-current="page"
-          >
-            <span class="vitrine__categoria vitrine__categoria--caes"
-              >Cães</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--gatos"
-              >Gatos</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--racoes"
-              >Rações</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--petiscos"
-              >Petiscos</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--coleiras"
-              >Coleiras</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--comedouros"
-              >Comedouros</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--higiene"
-              >Higiene</span
-            >
-            <span class="vitrine__categoria vitrine__categoria--limpeza"
-              >Limpeza</span
-            >
-          </li>
-        </ol>
-      </nav>
-
-      <div
-        class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3"
-      >
-        <h1 class="vitrine__titulo">
-          <span class="vitrine__categoria vitrine__categoria--todos"
-            >Todos os Produtos</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--caes">Cães</span>
-          <span class="vitrine__categoria vitrine__categoria--gatos"
-            >Gatos</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--racoes"
-            >Rações</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--petiscos"
-            >Petiscos</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--coleiras"
-            >Coleiras</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--comedouros"
-            >Comedouros</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--higiene"
-            >Higiene</span
-          >
-          <span class="vitrine__categoria vitrine__categoria--limpeza"
-            >Limpeza</span
-          >
-        </h1>
-        <div class="d-flex gap-2">
-          <button
-            class="btn btn-outline-secondary d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#filtros"
-            aria-expanded="false"
-            aria-controls="filtros"
-          >
-            Filtros
+  <header class="cabecalho sticky-top">
+    <nav class="navbar navbar-expand-lg py-2" aria-label="Menu principal">
+      <div class="container-xl">
+        <a class="navbar-brand cabecalho__marca py-0" href="index.html"><img src="imagens/logo-itapets.png"
+            alt="ItaPets — página inicial" width="400" height="214"></a>
+        <div class="d-flex align-items-center gap-1 order-lg-last">
+          <a class="cabecalho__icone" href="produtos.html"><img src="imagens/carrinho-compras.png"
+              alt="Carrinho de compras" width="100" height="100"></a>
+          <a class="cabecalho__icone" href="produtos.html"><img src="imagens/favoritos.png" alt="Favoritos" width="100"
+              height="100"></a>
+          <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+            aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <label class="visually-hidden" for="ordenar">Ordenar por</label>
-          <select class="form-select" id="ordenar">
-            <option value="relevancia">Mais relevantes</option>
-            <option value="menor-preco">Menor preço</option>
-            <option value="maior-preco">Maior preço</option>
-            <option value="nome">Nome (A–Z)</option>
-            <option value="avaliacao">Melhor avaliados</option>
-          </select>
         </div>
-      </div>
-
-      <nav class="chips mb-2" aria-label="Categorias">
-        <a class="chips__link" href="#todos">Todos</a>
-        <a class="chips__link" href="#caes">Cães</a>
-        <a class="chips__link" href="#gatos">Gatos</a>
-        <a class="chips__link" href="#racoes">Rações</a>
-        <a class="chips__link" href="#petiscos">Petiscos</a>
-        <a class="chips__link" href="#coleiras">Coleiras</a>
-        <a class="chips__link" href="#comedouros">Comedouros</a>
-        <a class="chips__link" href="#higiene">Higiene</a>
-        <a class="chips__link" href="#limpeza">Limpeza</a>
-      </nav>
-
-      <div class="row g-4">
-        <div class="col-lg-3">
-          <form
-            class="filtros collapse d-lg-block"
-            id="filtros"
-            aria-label="Filtros"
-          >
-            <fieldset class="mb-4">
-              <legend class="filtros__legenda">Preço</legend>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="preco"
-                  id="p-todos"
-                  checked
-                /><label class="form-check-label" for="p-todos"
-                  >Todos os preços</label
-                >
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="preco"
-                  id="p-ate50"
-                /><label class="form-check-label" for="p-ate50"
-                  >Até R$ 50</label
-                >
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="preco"
-                  id="p-50a100"
-                /><label class="form-check-label" for="p-50a100"
-                  >R$ 50 a R$ 100</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="preco"
-                  id="p-acima100"
-                /><label class="form-check-label" for="p-acima100"
-                  >Acima de R$ 100</label
-                >
-              </div>
-            </fieldset>
-
-            <fieldset class="mb-4">
-              <legend class="filtros__legenda">Marca</legend>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-quatree"
-                /><label class="form-check-label" for="m-quatree"
-                  >Quatree</label
-                >
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-truly-delight"
-                /><label class="form-check-label" for="m-truly-delight"
-                  >Truly Delight</label
-                >
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-premier"
-                /><label class="form-check-label" for="m-premier"
-                  >Premier</label
-                >
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-newpet"
-                /><label class="form-check-label" for="m-newpet">Newpet</label>
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-myhug"
-                /><label class="form-check-label" for="m-myhug">MyHug</label>
-              </div>
-              <div class="form-check mb-2">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-petlove"
-                /><label class="form-check-label" for="m-petlove"
-                  >Petlove</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input filtros__marca"
-                  type="checkbox"
-                  id="m-petclean"
-                /><label class="form-check-label" for="m-petclean"
-                  >PetClean</label
-                >
-              </div>
-            </fieldset>
-
-            <button type="reset" class="btn btn--contorno w-100">
-              Limpar filtros
+        <div class="collapse navbar-collapse" id="menu-principal">
+          <ul class="navbar-nav ms-lg-4 me-lg-auto py-3 py-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="produtos.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Fale Conosco</a>
+            </li>
+          </ul>
+          <form class="busca mb-3 mb-lg-0 me-lg-3" role="search" action="produtos.html">
+            <input class="busca__campo" type="search" name="busca" placeholder="Buscar produtos..."
+              aria-label="Buscar produtos">
+            <button class="busca__botao" type="submit" aria-label="Buscar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
             </button>
           </form>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="col-lg-9">
-          <ul
-            class="vitrine__grade row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 u-lista-limpa"
-            aria-label="Lista de produtos"
-          >
-            <li
-              class="col vitrine__item"
-              data-categorias="caes racoes"
-              data-marca="quatree"
-              data-faixa="acima100"
-              style="--p: 18990; --n: 7; --a: 48"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/racao-premium-caes-adultos-15kg.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/racao-premium-caes-adultos-15kg.webp"
-                    alt="Ração Premium Cães Adultos"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/racao-premium-caes-adultos-15kg.html"
-                      >Ração Premium Cães Adultos 15kg</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.8"
-                    role="img"
-                    aria-label="Nota 4,8 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 189,90</p>
-                  <input type="checkbox" class="btn-check" id="add-1" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-1"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
+  <main id="conteudo" tabindex="-1" class="vitrine container-xl">
+    <span class="vitrine__alvo" id="caes"></span>
+    <span class="vitrine__alvo" id="gatos"></span>
+    <span class="vitrine__alvo" id="racoes"></span>
+    <span class="vitrine__alvo" id="petiscos"></span>
+    <span class="vitrine__alvo" id="coleiras"></span>
+    <span class="vitrine__alvo" id="comedouros"></span>
+    <span class="vitrine__alvo" id="higiene"></span>
+    <span class="vitrine__alvo" id="limpeza"></span>
+
+    <nav aria-label="Você está em">
+      <ol class="breadcrumb small mb-2">
+        <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+        <li class="breadcrumb-item"><a href="produtos.html">Produtos</a></li>
+        <li class="breadcrumb-item vitrine__migalha fw-semibold" aria-current="page">
+          <span class="vitrine__categoria vitrine__categoria--caes">Cães</span>
+          <span class="vitrine__categoria vitrine__categoria--gatos">Gatos</span>
+          <span class="vitrine__categoria vitrine__categoria--racoes">Rações</span>
+          <span class="vitrine__categoria vitrine__categoria--petiscos">Petiscos</span>
+          <span class="vitrine__categoria vitrine__categoria--coleiras">Coleiras</span>
+          <span class="vitrine__categoria vitrine__categoria--comedouros">Comedouros</span>
+          <span class="vitrine__categoria vitrine__categoria--higiene">Higiene</span>
+          <span class="vitrine__categoria vitrine__categoria--limpeza">Limpeza</span>
+        </li>
+      </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+      <h1 class="vitrine__titulo">
+        <span class="vitrine__categoria vitrine__categoria--todos">Todos os Produtos</span>
+        <span class="vitrine__categoria vitrine__categoria--caes">Cães</span>
+        <span class="vitrine__categoria vitrine__categoria--gatos">Gatos</span>
+        <span class="vitrine__categoria vitrine__categoria--racoes">Rações</span>
+        <span class="vitrine__categoria vitrine__categoria--petiscos">Petiscos</span>
+        <span class="vitrine__categoria vitrine__categoria--coleiras">Coleiras</span>
+        <span class="vitrine__categoria vitrine__categoria--comedouros">Comedouros</span>
+        <span class="vitrine__categoria vitrine__categoria--higiene">Higiene</span>
+        <span class="vitrine__categoria vitrine__categoria--limpeza">Limpeza</span>
+      </h1>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#filtros" aria-expanded="false" aria-controls="filtros">
+          Filtros
+        </button>
+        <label class="visually-hidden" for="ordenar">Ordenar por</label>
+        <select class="form-select" id="ordenar">
+          <option value="relevancia">Mais relevantes</option>
+          <option value="menor-preco">Menor preço</option>
+          <option value="maior-preco">Maior preço</option>
+          <option value="nome">Nome (A–Z)</option>
+          <option value="avaliacao">Melhor avaliados</option>
+        </select>
+      </div>
+    </div>
+
+    <nav class="chips mb-2" aria-label="Categorias">
+      <a class="chips__link" href="#todos">Todos</a>
+      <a class="chips__link" href="#caes">Cães</a>
+      <a class="chips__link" href="#gatos">Gatos</a>
+      <a class="chips__link" href="#racoes">Rações</a>
+      <a class="chips__link" href="#petiscos">Petiscos</a>
+      <a class="chips__link" href="#coleiras">Coleiras</a>
+      <a class="chips__link" href="#comedouros">Comedouros</a>
+      <a class="chips__link" href="#higiene">Higiene</a>
+      <a class="chips__link" href="#limpeza">Limpeza</a>
+    </nav>
+
+    <div class="row g-4">
+      <aside class="col-lg-3">
+        <form class="filtros collapse d-lg-block" id="filtros" aria-label="Filtros">
+          <fieldset class="mb-4">
+            <legend class="filtros__legenda">Preço</legend>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="preco" id="p-todos" checked><label
+                class="form-check-label" for="p-todos">Todos os preços</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="preco" id="p-ate50"><label class="form-check-label"
+                for="p-ate50">Até R$ 50</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="preco" id="p-50a100"><label class="form-check-label"
+                for="p-50a100">R$ 50 a R$ 100</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="preco" id="p-acima100"><label class="form-check-label"
+                for="p-acima100">Acima de R$ 100</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="mb-4">
+            <legend class="filtros__legenda">Marca</legend>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-quatree"><label
+                class="form-check-label" for="m-quatree">Quatree</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-truly-delight"><label
+                class="form-check-label" for="m-truly-delight">Truly Delight</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-premier"><label
+                class="form-check-label" for="m-premier">Premier</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-newpet"><label
+                class="form-check-label" for="m-newpet">Newpet</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-myhug"><label
+                class="form-check-label" for="m-myhug">MyHug</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-petlove"><label
+                class="form-check-label" for="m-petlove">Petlove</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input filtros__marca" type="checkbox" id="m-petclean"><label
+                class="form-check-label" for="m-petclean">PetClean</label>
+            </div>
+          </fieldset>
+
+          <button type="reset" class="btn btn--contorno w-100">
+            Limpar filtros
+          </button>
+        </form>
+      </aside>
+
+      <div class="col-lg-9">
+        <ul class="vitrine__grade row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 u-lista-limpa"
+          aria-label="Lista de produtos">
+          <li class="col vitrine__item" data-categorias="caes racoes" data-marca="quatree" data-faixa="acima100"
+            style="--p: 18990; --n: 7; --a: 48">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/racao-premium-caes-adultos-15kg.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/racao-premium-caes-adultos-15kg.webp"
+                  alt="Ração Premium Cães Adultos" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/racao-premium-caes-adultos-15kg.html">Ração Premium Cães Adultos 15kg</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.8" role="img" aria-label="Nota 4,8 de 5"></span>
+                <p class="produto-card__preco">R$ 189,90</p>
+                <input type="checkbox" class="btn-check" id="add-1">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-1"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
               </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes racoes" data-marca="quatree" data-faixa="acima100"
+            style="--p: 18990; --n: 9; --a: 46">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/racao-premium-caes-porte-pequeno-15kg.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/racao-premium-caes-porte-pequeno-15kg.png"
+                  alt="Ração Premium Cães Porte Pequeno" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/racao-premium-caes-porte-pequeno-15kg.html">Ração Premium Cães Porte Pequeno
+                    15kg</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.6" role="img" aria-label="Nota 4,6 de 5"></span>
+                <p class="produto-card__preco">R$ 189,90</p>
+                <input type="checkbox" class="btn-check" id="add-2">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-2"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes racoes" data-marca="quatree" data-faixa="acima100"
+            style="--p: 18990; --n: 8; --a: 49">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/racao-premium-caes-filhotes-15kg.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/racao-premium-caes-filhotes-15kg.png"
+                  alt="Ração Premium Cães Filhotes" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/racao-premium-caes-filhotes-15kg.html">Ração Premium Cães Filhotes 15kg</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.9" role="img" aria-label="Nota 4,9 de 5"></span>
+                <p class="produto-card__preco">R$ 189,90</p>
+                <input type="checkbox" class="btn-check" id="add-3">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-3"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="gatos racoes" data-marca="quatree" data-faixa="acima100"
+            style="--p: 18990; --n: 10; --a: 47">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/racao-premium-gatos-adultos-15kg.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/racao-premium-gatos-adultos-15kg.webp"
+                  alt="Ração Premium Gatos Adultos" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/racao-premium-gatos-adultos-15kg.html">Ração Premium Gatos Adultos 15kg</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.7" role="img" aria-label="Nota 4,7 de 5"></span>
+                <p class="produto-card__preco">R$ 189,90</p>
+                <input type="checkbox" class="btn-check" id="add-4">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-4"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes petiscos" data-marca="truly-delight" data-faixa="ate50"
+            style="--p: 2600; --n: 6; --a: 45">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/petisco-truly-delight-palito-frango-cenoura-90g.html"
+                tabindex="-1" aria-hidden="true"><img
+                  src="produtos/petisco-truly-delight-palito-frango-cenoura-90g.webp" alt="Petisco Truly Delight"
+                  width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/petisco-truly-delight-palito-frango-cenoura-90g.html">Petisco Truly Delight Palito
+                    de Frango e Cenoura 90g</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.5" role="img" aria-label="Nota 4,5 de 5"></span>
+                <p class="produto-card__preco">R$ 26,00</p>
+                <input type="checkbox" class="btn-check" id="add-5">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-5"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes petiscos" data-marca="premier" data-faixa="50a100"
+            style="--p: 5400; --n: 5; --a: 46">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html"
+                tabindex="-1" aria-hidden="true"><img
+                  src="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.webp" alt="Petisco Premier Cookie"
+                  width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html">Petisco Premier Cookie
+                    Frutas Vermelhas e Aveia 250g</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.6" role="img" aria-label="Nota 4,6 de 5"></span>
+                <p class="produto-card__preco">R$ 54,00</p>
+                <input type="checkbox" class="btn-check" id="add-6">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-6"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes gatos comedouros" data-marca="newpet"
+            data-faixa="acima100" style="--p: 14000; --n: 4; --a: 44">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/comedouro-automatico-caes-gatos.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/comedouro-automatico-caes-gatos.jpg"
+                  alt="Comedouro automático para cães e gatos" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/comedouro-automatico-caes-gatos.html">Comedouro Automático para Cães e Gatos</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.4" role="img" aria-label="Nota 4,4 de 5"></span>
+                <p class="produto-card__preco">R$ 140,00</p>
+                <input type="checkbox" class="btn-check" id="add-7">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-7"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="gatos higiene" data-marca="myhug" data-faixa="ate50"
+            style="--p: 2100; --n: 1; --a: 43">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/areia-higienica-myhug-granulos-finos-4kg.html"
+                tabindex="-1" aria-hidden="true"><img src="produtos/areia-higienica-myhug-granulos-finos-4kg.webp"
+                  alt="Areia higiênica MyHug" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/areia-higienica-myhug-granulos-finos-4kg.html">Areia Higiênica MyHug Grânulos Finos
+                    4kg</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.3" role="img" aria-label="Nota 4,3 de 5"></span>
+                <p class="produto-card__preco">R$ 21,00</p>
+                <input type="checkbox" class="btn-check" id="add-8">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-8"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes coleiras" data-marca="petlove" data-faixa="50a100"
+            style="--p: 8700; --n: 2; --a: 47">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/coleira-antipuxao-cachorro-medio-grande.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/coleira-antipuxao-cachorro-medio-grande.webp"
+                  alt="Coleira antipuxão para cachorro" width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/coleira-antipuxao-cachorro-medio-grande.html">Coleira Antipuxão para Cachorro Médio
+                    e Grande</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.7" role="img" aria-label="Nota 4,7 de 5"></span>
+                <p class="produto-card__preco">R$ 87,00</p>
+                <input type="checkbox" class="btn-check" id="add-9">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-9"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="gatos coleiras" data-marca="petlove" data-faixa="50a100"
+            style="--p: 7400; --n: 3; --a: 42">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/coleira-antipuxao-gatos.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/coleira-antipuxao-gatos.webp" alt="Coleira antipuxão para gatos"
+                  width="300" height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/coleira-antipuxao-gatos.html">Coleira Antipuxão para Gatos</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.2" role="img" aria-label="Nota 4,2 de 5"></span>
+                <p class="produto-card__preco">R$ 74,00</p>
+                <input type="checkbox" class="btn-check" id="add-10">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-10"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="caes limpeza" data-marca="petclean" data-faixa="ate50"
+            style="--p: 4400; --n: 11; --a: 45">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/shampoo-caes-250ml.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/shampoo-caes-250ml.webp" alt="Shampoo para cães" width="300"
+                  height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/shampoo-caes-250ml.html">Shampoo para Cães 250ml</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.5" role="img" aria-label="Nota 4,5 de 5"></span>
+                <p class="produto-card__preco">R$ 44,00</p>
+                <input type="checkbox" class="btn-check" id="add-11">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-11"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+
+          <li class="col vitrine__item" data-categorias="gatos limpeza" data-marca="petclean" data-faixa="ate50"
+            style="--p: 4400; --n: 12; --a: 44">
+            <article class="produto-card">
+              <a class="produto-card__imagem" href="produtos/shampoo-gatos-250ml.html" tabindex="-1"
+                aria-hidden="true"><img src="produtos/shampoo-gatos-250ml.webp" alt="Shampoo para gatos" width="300"
+                  height="300" loading="lazy"></a>
+              <div class="produto-card__corpo">
+                <h2 class="produto-card__titulo">
+                  <a href="produtos/shampoo-gatos-250ml.html">Shampoo para Gatos 250ml</a>
+                </h2>
+                <span class="estrelas" style="--nota: 4.4" role="img" aria-label="Nota 4,4 de 5"></span>
+                <p class="produto-card__preco">R$ 44,00</p>
+                <input type="checkbox" class="btn-check" id="add-12">
+                <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-12"><span
+                    class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container-xl">
+      <nav class="row g-4" aria-label="Links do rodapé">
+        <div class="col-6 col-md-3">
+          <h2 class="rodape__titulo">Informações</h2>
+          <ul class="u-lista-limpa">
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#caes">Cães</a>
             </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes racoes"
-              data-marca="quatree"
-              data-faixa="acima100"
-              style="--p: 18990; --n: 9; --a: 46"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/racao-premium-caes-porte-pequeno-15kg.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/racao-premium-caes-porte-pequeno-15kg.png"
-                    alt="Ração Premium Cães Porte Pequeno"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a
-                      href="produtos/racao-premium-caes-porte-pequeno-15kg.html"
-                      >Ração Premium Cães Porte Pequeno 15kg</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.6"
-                    role="img"
-                    aria-label="Nota 4,6 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 189,90</p>
-                  <input type="checkbox" class="btn-check" id="add-2" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-2"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
             </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes racoes"
-              data-marca="quatree"
-              data-faixa="acima100"
-              style="--p: 18990; --n: 8; --a: 49"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/racao-premium-caes-filhotes-15kg.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/racao-premium-caes-filhotes-15kg.png"
-                    alt="Ração Premium Cães Filhotes"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/racao-premium-caes-filhotes-15kg.html"
-                      >Ração Premium Cães Filhotes 15kg</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.9"
-                    role="img"
-                    aria-label="Nota 4,9 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 189,90</p>
-                  <input type="checkbox" class="btn-check" id="add-3" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-3"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
             </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="gatos racoes"
-              data-marca="quatree"
-              data-faixa="acima100"
-              style="--p: 18990; --n: 10; --a: 47"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/racao-premium-gatos-adultos-15kg.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/racao-premium-gatos-adultos-15kg.webp"
-                    alt="Ração Premium Gatos Adultos"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/racao-premium-gatos-adultos-15kg.html"
-                      >Ração Premium Gatos Adultos 15kg</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.7"
-                    role="img"
-                    aria-label="Nota 4,7 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 189,90</p>
-                  <input type="checkbox" class="btn-check" id="add-4" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-4"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes petiscos"
-              data-marca="truly-delight"
-              data-faixa="ate50"
-              style="--p: 2600; --n: 6; --a: 45"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/petisco-truly-delight-palito-frango-cenoura-90g.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/petisco-truly-delight-palito-frango-cenoura-90g.webp"
-                    alt="Petisco Truly Delight"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a
-                      href="produtos/petisco-truly-delight-palito-frango-cenoura-90g.html"
-                      >Petisco Truly Delight Palito de Frango e Cenoura 90g</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.5"
-                    role="img"
-                    aria-label="Nota 4,5 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 26,00</p>
-                  <input type="checkbox" class="btn-check" id="add-5" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-5"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes petiscos"
-              data-marca="premier"
-              data-faixa="50a100"
-              style="--p: 5400; --n: 5; --a: 46"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.webp"
-                    alt="Petisco Premier Cookie"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a
-                      href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html"
-                      >Petisco Premier Cookie Frutas Vermelhas e Aveia 250g</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.6"
-                    role="img"
-                    aria-label="Nota 4,6 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 54,00</p>
-                  <input type="checkbox" class="btn-check" id="add-6" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-6"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes gatos comedouros"
-              data-marca="newpet"
-              data-faixa="acima100"
-              style="--p: 14000; --n: 4; --a: 44"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/comedouro-automatico-caes-gatos.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/comedouro-automatico-caes-gatos.jpg"
-                    alt="Comedouro automático para cães e gatos"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/comedouro-automatico-caes-gatos.html"
-                      >Comedouro Automático para Cães e Gatos</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.4"
-                    role="img"
-                    aria-label="Nota 4,4 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 140,00</p>
-                  <input type="checkbox" class="btn-check" id="add-7" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-7"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="gatos higiene"
-              data-marca="myhug"
-              data-faixa="ate50"
-              style="--p: 2100; --n: 1; --a: 43"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/areia-higienica-myhug-granulos-finos-4kg.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/areia-higienica-myhug-granulos-finos-4kg.webp"
-                    alt="Areia higiênica MyHug"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a
-                      href="produtos/areia-higienica-myhug-granulos-finos-4kg.html"
-                      >Areia Higiênica MyHug Grânulos Finos 4kg</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.3"
-                    role="img"
-                    aria-label="Nota 4,3 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 21,00</p>
-                  <input type="checkbox" class="btn-check" id="add-8" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-8"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes coleiras"
-              data-marca="petlove"
-              data-faixa="50a100"
-              style="--p: 8700; --n: 2; --a: 47"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/coleira-antipuxao-cachorro-medio-grande.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/coleira-antipuxao-cachorro-medio-grande.webp"
-                    alt="Coleira antipuxão para cachorro"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a
-                      href="produtos/coleira-antipuxao-cachorro-medio-grande.html"
-                      >Coleira Antipuxão para Cachorro Médio e Grande</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.7"
-                    role="img"
-                    aria-label="Nota 4,7 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 87,00</p>
-                  <input type="checkbox" class="btn-check" id="add-9" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-9"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="gatos coleiras"
-              data-marca="petlove"
-              data-faixa="50a100"
-              style="--p: 7400; --n: 3; --a: 42"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/coleira-antipuxao-gatos.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/coleira-antipuxao-gatos.webp"
-                    alt="Coleira antipuxão para gatos"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/coleira-antipuxao-gatos.html"
-                      >Coleira Antipuxão para Gatos</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.2"
-                    role="img"
-                    aria-label="Nota 4,2 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 74,00</p>
-                  <input type="checkbox" class="btn-check" id="add-10" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-10"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="caes limpeza"
-              data-marca="petclean"
-              data-faixa="ate50"
-              style="--p: 4400; --n: 11; --a: 45"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/shampoo-caes-250ml.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/shampoo-caes-250ml.webp"
-                    alt="Shampoo para cães"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/shampoo-caes-250ml.html"
-                      >Shampoo para Cães 250ml</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.5"
-                    role="img"
-                    aria-label="Nota 4,5 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 44,00</p>
-                  <input type="checkbox" class="btn-check" id="add-11" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-11"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
-            </li>
-
-            <li
-              class="col vitrine__item"
-              data-categorias="gatos limpeza"
-              data-marca="petclean"
-              data-faixa="ate50"
-              style="--p: 4400; --n: 12; --a: 44"
-            >
-              <div class="produto-card">
-                <a
-                  class="produto-card__imagem"
-                  href="produtos/shampoo-gatos-250ml.html"
-                  tabindex="-1"
-                  ><img
-                    src="produtos/shampoo-gatos-250ml.webp"
-                    alt="Shampoo para gatos"
-                    width="300"
-                    height="300"
-                    loading="lazy"
-                /></a>
-                <div class="produto-card__corpo">
-                  <h2 class="produto-card__titulo">
-                    <a href="produtos/shampoo-gatos-250ml.html"
-                      >Shampoo para Gatos 250ml</a
-                    >
-                  </h2>
-                  <span
-                    class="estrelas"
-                    style="--nota: 4.4"
-                    role="img"
-                    aria-label="Nota 4,4 de 5"
-                  ></span>
-                  <p class="produto-card__preco">R$ 44,00</p>
-                  <input type="checkbox" class="btn-check" id="add-12" />
-                  <label class="btn btn--laranja btn-sm w-100 mt-1" for="add-12"
-                    ><span class="u-texto-inativo">Adicionar</span
-                    ><span class="u-texto-ativo">Adicionado ✓</span></label
-                  >
-                </div>
-              </div>
+            <li class="rodape__item">
+              <a class="rodape__link" href="contato.html">Fale Conosco</a>
             </li>
           </ul>
         </div>
-      </div>
-    </main>
-
-    <footer class="rodape">
-      <div class="container-xl">
-        <div class="row g-4">
-          <div class="col-6 col-md-3">
-            <h2 class="rodape__titulo">Informações</h2>
-            <ul class="u-lista-limpa">
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#caes">Cães</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="contato.html">Fale Conosco</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3">
-            <h2 class="rodape__titulo">Categorias</h2>
-            <ul class="u-lista-limpa">
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#racoes">Rações</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#coleiras"
-                  >Acessórios</a
-                >
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#petiscos"
-                  >Petiscos</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3">
-            <h2 class="rodape__titulo">Produtos</h2>
-            <ul class="u-lista-limpa">
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#caes">Cães</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#limpeza">Banho</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html#comedouros"
-                  >Comedouros</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3">
-            <h2 class="rodape__titulo">Minha Conta</h2>
-            <ul class="u-lista-limpa">
-              <li class="rodape__item">
-                <a class="rodape__link" href="contato.html">Ver meus pedidos</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="contato.html">Meu perfil</a>
-              </li>
-              <li class="rodape__item">
-                <a class="rodape__link" href="produtos.html">Favoritos</a>
-              </li>
-            </ul>
-            <div class="d-flex gap-3 mt-3">
-              <a
-                class="rodape__social"
-                href="https://www.facebook.com/"
-                aria-label="Facebook"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.470h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  /></svg
-              ></a>
-              <a
-                class="rodape__social"
-                href="https://www.instagram.com/"
-                aria-label="Instagram"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  aria-hidden="true"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="5" />
-                  <circle cx="12" cy="12" r="4" />
-                  <circle
-                    cx="17.5"
-                    cy="6.5"
-                    r="1"
-                    fill="currentColor"
-                    stroke="none"
-                  /></svg
-              ></a>
-              <a
-                class="rodape__social"
-                href="https://www.youtube.com/"
-                aria-label="YouTube"
-                ><svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                  /></svg
-              ></a>
-            </div>
+        <div class="col-6 col-md-3">
+          <h2 class="rodape__titulo">Categorias</h2>
+          <ul class="u-lista-limpa">
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#racoes">Rações</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#coleiras">Acessórios</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#petiscos">Petiscos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="rodape__titulo">Produtos</h2>
+          <ul class="u-lista-limpa">
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#caes">Cães</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#limpeza">Banho</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html#comedouros">Comedouros</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="rodape__titulo">Minha Conta</h2>
+          <ul class="u-lista-limpa">
+            <li class="rodape__item">
+              <a class="rodape__link" href="contato.html">Ver meus pedidos</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="contato.html">Meu perfil</a>
+            </li>
+            <li class="rodape__item">
+              <a class="rodape__link" href="produtos.html">Favoritos</a>
+            </li>
+          </ul>
+          <div class="d-flex gap-3 mt-3">
+            <a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.470h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a class="rodape__social" href="https://www.instagram.com/" aria-label="Instagram"><svg width="22"
+                height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg></a>
+            <a class="rodape__social" href="https://www.youtube.com/" aria-label="YouTube"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg></a>
           </div>
         </div>
-        <p class="rodape__base mb-0">
-          &copy; 2026 ItaPets. Todos os direitos reservados.
-        </p>
-      </div>
-    </footer>
-  </body>
+      </nav>
+      <p class="rodape__base mb-0">
+        &copy; 2026 ItaPets. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
