@@ -7,6 +7,15 @@
   <title>ItaPets — Tudo para o seu pet</title>
   <meta name="description"
     content="ItaPets: rações, petiscos, coleiras, comedouros e produtos de higiene para cães e gatos, com qualidade e preço justo.">
+  <link rel="canonical" href="https://jmatheus-dev.github.io/ItaPets/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ItaPets">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="ItaPets — Tudo para o seu pet">
+  <meta property="og:description" content="ItaPets: rações, petiscos, coleiras, comedouros e produtos de higiene para cães e gatos, com qualidade e preço justo.">
+  <meta property="og:url" content="https://jmatheus-dev.github.io/ItaPets/">
+  <meta property="og:image" content="https://jmatheus-dev.github.io/ItaPets/imagens/logo-itapets.webp">
+  <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#d7f0fa">
   <link rel="icon" href="imagens/favicon/icone-site.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="imagens/favicon/icone-192.png" sizes="192x192">
@@ -20,6 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
     defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -29,9 +39,9 @@
     <nav class="container-xl" aria-label="Menu principal">
       <a class="navbar-brand cabecalho__marca py-0" href="index.html"><img src="imagens/logo-itapets.webp"
           alt="ItaPets — página inicial"></a>
-      <a class="cabecalho__icone ms-auto order-lg-last" href="produtos.html"><img
+      <a class="cabecalho__icone ms-auto order-lg-last" data-abrir="carrinho" href="produtos.html"><img
           src="imagens/icones/carrinho-compras.webp" alt="Carrinho de compras"></a>
-      <a class="cabecalho__icone ms-1 order-lg-last" href="produtos.html"><img src="imagens/icones/favoritos.webp"
+      <a class="cabecalho__icone ms-1 order-lg-last" data-abrir="favoritos" href="produtos.html"><img src="imagens/icones/favoritos.webp"
           alt="Favoritos"></a>
       <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target=".cabecalho__menu"
         aria-controls="menu-principal busca-principal" aria-expanded="false" aria-label="Abrir menu">
@@ -65,17 +75,125 @@
   </header>
 
   <main id="conteudo" tabindex="-1" class="container-xl">
-    <section class="hero row align-items-end g-0 mx-0" aria-labelledby="hero-titulo">
-      <header class="hero__texto col-12 col-sm-7 col-md-6">
-        <h1 class="hero__titulo" id="hero-titulo">Tudo para <br>o seu Pet!</h1>
-        <p class="hero__descricao">Rações Super Premium</p>
-        <p class="hero__descricao">Acessórios Exclusivos</p>
-        <a class="btn btn--laranja btn-lg hero__botao mt-3 px-4 px-md-5" href="produtos.html">Comprar Agora</a>
-      </header>
-      <figure class="col-12 col-sm-5 col-md-6 mb-0">
-        <img class="hero__imagem" src="imagens/banner-pets.webp"
-          alt="Ilustração de um cachorro e um gato sentados lado a lado" fetchpriority="high">
-      </figure>
+    <section class="carrossel carousel slide carousel-fade" id="carrossel" aria-roledescription="carrossel"
+      aria-label="Destaques da loja" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+        <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 de 4">
+          <section class="hero row align-items-end g-0 mx-0" aria-labelledby="hero-titulo">
+            <header class="hero__texto col-12 col-sm-7 col-md-6">
+              <h1 class="hero__titulo" id="hero-titulo">Tudo para <br>o seu Pet!</h1>
+              <p class="hero__descricao">Rações Super Premium</p>
+              <p class="hero__descricao">Acessórios Exclusivos</p>
+              <a class="btn btn--laranja btn-lg hero__botao mt-3 px-4 px-md-5" href="produtos.html">Comprar Agora</a>
+            </header>
+            <figure class="col-12 col-sm-5 col-md-6 mb-0">
+              <img class="hero__imagem" src="imagens/banner-pets.webp"
+                alt="Ilustração de um cachorro e um gato sentados lado a lado" fetchpriority="high">
+            </figure>
+          </section>
+        </div>
+
+        <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 de 4">
+          <section class="hero hero--racoes row align-items-end g-0 mx-0" aria-labelledby="slide-racoes">
+            <header class="hero__texto col-12 col-sm-7 col-md-6">
+              <h2 class="hero__titulo" id="slide-racoes">Rações <br>Premium</h2>
+              <p class="hero__descricao">Para cães e gatos</p>
+              <p class="hero__descricao">15kg por R$ 189,90</p>
+              <a class="btn btn--laranja btn-lg hero__botao mt-3 px-4 px-md-5" href="produtos.html#racoes">Ver rações</a>
+            </header>
+            <figure class="col-12 col-sm-5 col-md-6 mb-0">
+              <span class="carrossel__produtos">
+                <img class="carrossel__foto carrossel__foto--fundo-esquerda"
+                  src="imagens/produtos/racao-premium-caes-filhotes-15kg.webp" alt="" loading="lazy">
+                <img class="carrossel__foto carrossel__foto--fundo-direita"
+                  src="imagens/produtos/racao-premium-gatos-adultos-15kg.webp" alt="" loading="lazy">
+                <img class="carrossel__foto carrossel__foto--frente"
+                  src="imagens/produtos/racao-premium-caes-adultos-15kg.webp" alt="" loading="lazy">
+              </span>
+            </figure>
+          </section>
+        </div>
+
+        <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="3 de 4">
+          <section class="hero hero--petiscos row align-items-end g-0 mx-0" aria-labelledby="slide-petiscos">
+            <header class="hero__texto col-12 col-sm-7 col-md-6">
+              <h2 class="hero__titulo" id="slide-petiscos">Petiscos <br>deliciosos</h2>
+              <p class="hero__descricao">Premier e Truly Delight</p>
+              <p class="hero__descricao">A partir de R$ 26,00</p>
+              <a class="btn btn--laranja btn-lg hero__botao mt-3 px-4 px-md-5" href="produtos.html#petiscos">Ver
+                petiscos</a>
+            </header>
+            <figure class="col-12 col-sm-5 col-md-6 mb-0">
+              <span class="carrossel__produtos">
+                <img class="carrossel__foto carrossel__foto--fundo-esquerda"
+                  src="imagens/produtos/petisco-truly-delight-palito-frango-cenoura-90g.webp" alt="" loading="lazy">
+                <img class="carrossel__foto carrossel__foto--frente"
+                  src="imagens/produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.webp" alt=""
+                  loading="lazy">
+              </span>
+            </figure>
+          </section>
+        </div>
+
+        <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="4 de 4">
+          <section class="hero hero--banho row align-items-end g-0 mx-0" aria-labelledby="slide-banho">
+            <header class="hero__texto col-12 col-sm-7 col-md-6">
+              <h2 class="hero__titulo" id="slide-banho">Banho <br>em casa</h2>
+              <p class="hero__descricao">Shampoos PetClean</p>
+              <p class="hero__descricao">Com aloe vera, R$ 44,00</p>
+              <a class="btn btn--laranja btn-lg hero__botao mt-3 px-4 px-md-5" href="produtos.html#limpeza">Ver
+                shampoos</a>
+            </header>
+            <figure class="col-12 col-sm-5 col-md-6 mb-0">
+              <span class="carrossel__produtos">
+                <img class="carrossel__foto carrossel__foto--fundo-direita"
+                  src="imagens/produtos/shampoo-gatos-250ml.webp" alt="" loading="lazy">
+                <img class="carrossel__foto carrossel__foto--frente" src="imagens/produtos/shampoo-caes-250ml.webp"
+                  alt="" loading="lazy">
+              </span>
+            </figure>
+          </section>
+        </div>
+      </div>
+
+      <button class="carrossel__seta carrossel__seta--anterior" type="button" data-bs-target="#carrossel"
+        data-bs-slide="prev" aria-label="Slide anterior">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="carrossel__seta carrossel__seta--proxima" type="button" data-bs-target="#carrossel"
+        data-bs-slide="next" aria-label="Próximo slide">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+
+      <div class="carrossel__controles">
+        <button class="carrossel__pausa" type="button" aria-label="Pausar carrossel" hidden>
+          <svg class="carrossel__icone-pausa" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <rect x="5" y="4" width="5" height="16" rx="1" />
+            <rect x="14" y="4" width="5" height="16" rx="1" />
+          </svg>
+          <svg class="carrossel__icone-tocar" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true">
+            <path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5z" />
+          </svg>
+        </button>
+        <div class="carrossel__indicadores carousel-indicators">
+          <button type="button" data-bs-target="#carrossel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Ir para o slide 1"></button>
+          <button type="button" data-bs-target="#carrossel" data-bs-slide-to="1"
+            aria-label="Ir para o slide 2"></button>
+          <button type="button" data-bs-target="#carrossel" data-bs-slide-to="2"
+            aria-label="Ir para o slide 3"></button>
+          <button type="button" data-bs-target="#carrossel" data-bs-slide-to="3"
+            aria-label="Ir para o slide 4"></button>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="categorias-titulo">
@@ -124,10 +242,82 @@
           </a>
         </li>
         <li class="col categorias__item">
-          <a class="categoria-card" href="produtos.html">
+          <a class="categoria-card" href="contato.html?assunto=Farm%C3%A1cia">
             <img src="imagens/categorias/farmacia.webp" alt="" loading="lazy"><span
-              class="categoria-card__nome">Farmácia</span>
+              class="categoria-card__nome">Farmácia</span><span class="categoria-card__selo">Em breve</span>
           </a>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="destaques-titulo">
+      <header class="destaques__cabecalho">
+        <h2 class="destaques__titulo" id="destaques-titulo">Produtos em Destaque</h2>
+        <a class="destaques__link" href="produtos.html">Ver todos os produtos ›</a>
+      </header>
+      <ul class="row row-cols-2 row-cols-md-4 g-3 u-lista-limpa">
+        <li class="col">
+          <article class="produto-card">
+            <a class="produto-card__imagem" href="produtos/racao-premium-caes-adultos-15kg.html" tabindex="-1"
+              aria-hidden="true"><img src="imagens/produtos/racao-premium-caes-adultos-15kg-miniatura.webp"
+                alt="Ração Premium Cães Adultos" loading="lazy"></a>
+            <h3 class="produto-card__titulo">
+              <a href="produtos/racao-premium-caes-adultos-15kg.html">Ração Premium Cães Adultos 15kg</a>
+            </h3>
+            <span class="estrelas" style="--nota: 4.8" role="img" aria-label="Nota 4,8 de 5"></span>
+            <p class="produto-card__preco">R$ 189,90</p>
+            <input type="checkbox" class="btn-check" id="destaque-1">
+            <label class="btn btn--laranja btn-sm w-100 mt-1" for="destaque-1"><span
+                class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+          </article>
+        </li>
+        <li class="col">
+          <article class="produto-card">
+            <a class="produto-card__imagem" href="produtos/racao-premium-gatos-adultos-15kg.html" tabindex="-1"
+              aria-hidden="true"><img src="imagens/produtos/racao-premium-gatos-adultos-15kg-miniatura.webp"
+                alt="Ração Premium Gatos Adultos" loading="lazy"></a>
+            <h3 class="produto-card__titulo">
+              <a href="produtos/racao-premium-gatos-adultos-15kg.html">Ração Premium Gatos Adultos 15kg</a>
+            </h3>
+            <span class="estrelas" style="--nota: 4.7" role="img" aria-label="Nota 4,7 de 5"></span>
+            <p class="produto-card__preco">R$ 189,90</p>
+            <input type="checkbox" class="btn-check" id="destaque-2">
+            <label class="btn btn--laranja btn-sm w-100 mt-1" for="destaque-2"><span
+                class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+          </article>
+        </li>
+        <li class="col">
+          <article class="produto-card">
+            <a class="produto-card__imagem" href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html"
+              tabindex="-1" aria-hidden="true"><img
+                src="imagens/produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g-miniatura.webp"
+                alt="Petisco Premier Cookie" loading="lazy"></a>
+            <h3 class="produto-card__titulo">
+              <a href="produtos/petisco-premier-cookie-frutas-vermelhas-aveia-250g.html">Petisco Premier Cookie
+                Frutas Vermelhas e Aveia 250g</a>
+            </h3>
+            <span class="estrelas" style="--nota: 4.6" role="img" aria-label="Nota 4,6 de 5"></span>
+            <p class="produto-card__preco">R$ 54,00</p>
+            <input type="checkbox" class="btn-check" id="destaque-3">
+            <label class="btn btn--laranja btn-sm w-100 mt-1" for="destaque-3"><span
+                class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+          </article>
+        </li>
+        <li class="col">
+          <article class="produto-card">
+            <a class="produto-card__imagem" href="produtos/coleira-antipuxao-cachorro-medio-grande.html" tabindex="-1"
+              aria-hidden="true"><img src="imagens/produtos/coleira-antipuxao-cachorro-medio-grande-miniatura.webp"
+                alt="Coleira antipuxão para cachorro" loading="lazy"></a>
+            <h3 class="produto-card__titulo">
+              <a href="produtos/coleira-antipuxao-cachorro-medio-grande.html">Coleira Antipuxão para Cachorro Médio
+                e Grande</a>
+            </h3>
+            <span class="estrelas" style="--nota: 4.7" role="img" aria-label="Nota 4,7 de 5"></span>
+            <p class="produto-card__preco">R$ 87,00</p>
+            <input type="checkbox" class="btn-check" id="destaque-4">
+            <label class="btn btn--laranja btn-sm w-100 mt-1" for="destaque-4"><span
+                class="u-texto-inativo">Adicionar</span><span class="u-texto-ativo">Adicionado ✓</span></label>
+          </article>
         </li>
       </ul>
     </section>
@@ -144,19 +334,19 @@
   <footer class="rodape container-xl">
     <nav class="rodape__nav" aria-label="Links do rodapé">
       <section>
-        <h2 class="rodape__titulo">Informações</h2>
+        <h2 class="rodape__titulo">Navegue</h2>
         <ul class="u-lista-limpa">
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#caes">Cães</a>
+            <a class="rodape__link" href="index.html">Início</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
+            <a class="rodape__link" href="produtos.html">Todos os produtos</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
+            <a class="rodape__link" href="produtos.html#caes">Para cães</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="contato.html">Fale Conosco</a>
+            <a class="rodape__link" href="produtos.html#gatos">Para gatos</a>
           </li>
         </ul>
       </section>
@@ -167,46 +357,44 @@
             <a class="rodape__link" href="produtos.html#racoes">Rações</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#coleiras">Acessórios</a>
+            <a class="rodape__link" href="produtos.html#petiscos">Petiscos</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#coleiras">Coleiras</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="produtos.html#comedouros">Comedouros</a>
           </li>
           <li class="rodape__item">
             <a class="rodape__link" href="produtos.html#higiene">Higiene</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#petiscos">Petiscos</a>
+            <a class="rodape__link" href="produtos.html#limpeza">Banho e limpeza</a>
           </li>
         </ul>
       </section>
       <section>
-        <h2 class="rodape__titulo">Produtos</h2>
+        <h2 class="rodape__titulo">Minhas Compras</h2>
         <ul class="u-lista-limpa">
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#caes">Cães</a>
+            <a class="rodape__link" href="produtos.html" data-abrir="carrinho">Meu carrinho</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#gatos">Gatos</a>
+            <a class="rodape__link" href="produtos.html" data-abrir="favoritos">Meus favoritos</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#limpeza">Banho</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html#comedouros">Comedouros</a>
+            <a class="rodape__link" href="contato.html">Fale Conosco</a>
           </li>
         </ul>
       </section>
       <section>
-        <h2 class="rodape__titulo">Minha Conta</h2>
-        <ul class="u-lista-limpa">
-          <li class="rodape__item">
-            <a class="rodape__link" href="contato.html">Ver meus pedidos</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="contato.html">Meu perfil</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="produtos.html">Favoritos</a>
-          </li>
-        </ul>
+        <h2 class="rodape__titulo">Atendimento</h2>
+        <address class="rodape__contato">
+          <a class="rodape__link" href="tel:+5579900000000">(79) 90000-0000</a>
+          <a class="rodape__link text-break" href="mailto:contato@itapets.com.br">contato@itapets.com.br</a>
+          <span>Seg a Sáb, 8h às 18h</span>
+          <span>Itabaiana, Sergipe</span>
+        </address>
         <ul class="d-flex gap-3 mt-3 u-lista-limpa">
           <li><a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22"
                 height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -228,7 +416,7 @@
       </section>
     </nav>
     <p class="rodape__base mb-0">
-      &copy; 2026 ItaPets. Todos os direitos reservados.
+      &copy; <span data-ano>2026</span> ItaPets. Todos os direitos reservados.
     </p>
   </footer>
 </body>

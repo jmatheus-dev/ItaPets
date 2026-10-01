@@ -133,6 +133,12 @@ textarea:focus-visible {
 .cabecalho {
   min-height: var(--altura-cabecalho);
   background-color: var(--cor-azul-claro);
+  transition: box-shadow 0.2s ease;
+}
+
+/* classe colocada pelo js/main.js quando a página sai do topo */
+.cabecalho--rolado {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .cabecalho__marca img {
@@ -143,6 +149,7 @@ textarea:focus-visible {
 }
 
 .cabecalho__icone {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -159,6 +166,23 @@ textarea:focus-visible {
 .cabecalho__icone img {
   width: 28px;
   height: 28px;
+}
+
+/* quantidade de itens no carrinho e nos favoritos, criada pelo js/main.js */
+.cabecalho__contador {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: var(--raio-pilula);
+  background-color: var(--cor-laranja-acao);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
 }
 
 .cabecalho .nav-link {
@@ -368,6 +392,7 @@ textarea:focus-visible {
 }
 
 .produto-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -437,6 +462,12 @@ textarea:focus-visible {
   font-weight: 800;
 }
 
+/* no celular o card é estreito; menos respiro lateral evita "Adicionado ✓" em duas linhas */
+.produto-card .btn {
+  --bs-btn-padding-x: 0.5rem;
+  white-space: nowrap;
+}
+
 /* O rodapé também é o .container-xl; o border-image estende o fundo
    até as bordas da tela sem precisar de um container interno. */
 .rodape {
@@ -500,6 +531,15 @@ textarea:focus-visible {
   transform: translateY(-3px);
 }
 
+.rodape__contato {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  color: #262626;
+  font-size: 0.95rem;
+  font-style: normal;
+}
+
 .rodape__base {
   margin-top: 32px;
   padding-top: 20px;
@@ -554,6 +594,177 @@ textarea:focus-visible {
   }
 }
 
+/* carrossel da página inicial: cada slide é um .hero com cor própria */
+.carrossel {
+  position: relative;
+  margin-top: clamp(20px, 3vw, 40px);
+}
+
+.carrossel .carousel-inner {
+  border-radius: var(--raio-medio);
+}
+
+.carrossel .hero {
+  margin-top: 0;
+  border-radius: 0;
+}
+
+.hero--racoes {
+  background-color: #ffe3c8;
+}
+
+.hero--petiscos {
+  background-color: #fcdde4;
+}
+
+.hero--banho {
+  background-color: #d4f2e3;
+}
+
+/* mesma caixa da ilustração do 1º slide, para todos os slides terem a mesma altura */
+.carrossel__produtos {
+  position: relative;
+  display: block;
+  aspect-ratio: 520 / 785;
+  width: min(100%, 380px);
+  margin: 0 auto;
+}
+
+.carrossel__foto {
+  position: absolute;
+  aspect-ratio: 1;
+  padding: 5%;
+  object-fit: contain;
+  border-radius: 22px;
+  background-color: #ffffff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.carrossel__foto--frente {
+  bottom: 4%;
+  left: 12%;
+  z-index: 2;
+  width: 76%;
+}
+
+.carrossel__foto--fundo-esquerda {
+  bottom: 42%;
+  left: 0;
+  width: 56%;
+  rotate: -7deg;
+}
+
+.carrossel__foto--fundo-direita {
+  right: 0;
+  bottom: 46%;
+  width: 56%;
+  rotate: 7deg;
+}
+
+.carrossel__seta {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--sombra-suave);
+  color: var(--cor-texto);
+  translate: 0 -50%;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.carrossel__seta:hover {
+  background-color: #ffffff;
+  color: var(--cor-laranja-acao);
+}
+
+.carrossel__seta--anterior {
+  left: 8px;
+}
+
+.carrossel__seta--proxima {
+  right: 8px;
+}
+
+.carrossel__controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.carrossel__pausa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--cor-texto);
+}
+
+.carrossel__pausa:hover {
+  color: var(--cor-laranja-acao);
+}
+
+.carrossel__icone-tocar,
+.carrossel--pausado .carrossel__icone-pausa {
+  display: none;
+}
+
+.carrossel--pausado .carrossel__icone-tocar {
+  display: block;
+}
+
+/* sobrescreve a posição padrão do Bootstrap: os pontos ficam abaixo do slide */
+.carrossel .carrossel__indicadores {
+  position: static;
+  gap: 8px;
+  margin: 0;
+}
+
+.carrossel .carrossel__indicadores [data-bs-slide-to] {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: var(--raio-pilula);
+  background-color: #b9c6d2;
+  opacity: 1;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.carrossel .carrossel__indicadores .active {
+  width: 28px;
+  background-color: var(--cor-laranja-acao);
+}
+
+@media (max-width: 575.98px) {
+  .carrossel__produtos {
+    width: min(70%, 240px);
+  }
+}
+
+/* abaixo de 992px as setas cobririam o texto; ali se troca de slide arrastando ou pelos pontos */
+@media (max-width: 991.98px) {
+  .carrossel__seta {
+    display: none;
+  }
+}
+
 .categorias__titulo {
   margin: clamp(48px, 7vw, 96px) 0 clamp(24px, 4vw, 48px);
   font-size: clamp(1.5rem, 2.6vw, 2.2rem);
@@ -596,6 +807,17 @@ textarea:focus-visible {
   font-weight: 700;
 }
 
+.categoria-card__selo {
+  margin-top: -6px;
+  padding: 2px 10px;
+  border-radius: var(--raio-pilula);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .categorias__item:nth-child(1) {
   --cor-card: #ff8a4c;
 }
@@ -619,6 +841,29 @@ textarea:focus-visible {
 }
 .categorias__item:nth-child(8) {
   --cor-card: #f87171;
+}
+
+.destaques__cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin: clamp(48px, 7vw, 96px) 0 clamp(20px, 3vw, 32px);
+}
+
+.destaques__titulo {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+}
+
+.destaques__link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.destaques__link:hover {
+  text-decoration: underline;
 }
 
 .cta-contato {
@@ -1034,13 +1279,6 @@ textarea:focus-visible {
   background: var(--cor-fundo-suave);
 }
 
-@media (min-width: 992px) {
-  .galeria {
-    position: sticky;
-    top: calc(var(--altura-cabecalho) + 20px);
-  }
-}
-
 .contato {
   display: grid;
   align-content: start;
@@ -1089,6 +1327,297 @@ textarea:focus-visible {
   box-shadow: 0 0 0 0.2rem var(--bs-focus-ring-color);
 }
 
+.contato__contador {
+  display: block;
+  margin-top: 6px;
+  color: #555555;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+/* ---------- Peças criadas pelo js/main.js ---------- */
+
+/* botão de favoritar no canto de cada card */
+.produto-card__favorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #5f6b7a;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.produto-card__favorito:hover {
+  color: #b0164b;
+  transform: scale(1.08);
+}
+
+.produto-card__favorito[aria-pressed="true"] {
+  color: #b0164b;
+}
+
+.produto-card__favorito[aria-pressed="true"] svg {
+  fill: currentColor;
+}
+
+/* botões − e + em volta da quantidade */
+.quantidade {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-self: center;
+  align-items: center;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  background-color: #ffffff;
+}
+
+.quantidade:focus-within {
+  border-color: var(--cor-laranja);
+}
+
+.quantidade__botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--raio-pilula);
+  background: transparent;
+  color: var(--cor-azul-marca);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.quantidade__botao:hover:not(:disabled) {
+  color: var(--cor-laranja-acao);
+}
+
+.quantidade__botao:disabled {
+  color: #b5b5b5;
+}
+
+.quantidade .produto__quantidade {
+  width: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.quantidade .produto__quantidade::-webkit-inner-spin-button,
+.quantidade .produto__quantidade::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.quantidade--pequena .quantidade__botao {
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+}
+
+.quantidade__valor {
+  min-width: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* lupa que acompanha o mouse na foto principal do produto */
+.galeria__principal--zoom {
+  cursor: zoom-in;
+}
+
+.produto__compartilhar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cor-azul-marca);
+  font-weight: 600;
+}
+
+.produto__compartilhar:hover {
+  color: var(--cor-laranja-acao);
+  text-decoration: underline;
+}
+
+/* painéis laterais do carrinho e dos favoritos */
+.painel {
+  --bs-offcanvas-width: 420px;
+}
+
+.painel__lista {
+  display: grid;
+  gap: 16px;
+}
+
+.painel__item {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.painel__foto {
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  object-fit: contain;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  background-color: #ffffff;
+}
+
+.painel__info {
+  display: grid;
+  justify-items: start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.painel__nome {
+  color: var(--cor-texto);
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.painel__nome:hover {
+  color: var(--cor-laranja-acao);
+}
+
+.painel__preco {
+  color: #555555;
+  font-size: 0.875rem;
+}
+
+.painel__lado {
+  display: grid;
+  justify-items: end;
+  gap: 8px;
+}
+
+.painel__acao {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--cor-azul-marca);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.painel__acao:disabled {
+  color: var(--cor-verde-sucesso);
+  text-decoration: none;
+}
+
+.painel__acao--remover {
+  color: #b42318;
+}
+
+.painel__vazio {
+  padding: 40px 12px;
+  color: #555555;
+  text-align: center;
+}
+
+.painel__rodape {
+  display: grid;
+  gap: 10px;
+  padding: 16px 1rem 20px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.painel__total {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* avisos rápidos ("Adicionado ao carrinho", "Link copiado"...) */
+.avisos {
+  z-index: 1090;
+}
+
+.aviso {
+  --bs-toast-bg: #1f2937;
+  --bs-toast-color: #ffffff;
+  --bs-toast-border-color: transparent;
+  --bs-toast-border-radius: var(--raio-pequeno);
+  --bs-toast-max-width: 380px;
+}
+
+.aviso__acao {
+  flex-shrink: 0;
+  padding: 0 4px;
+  border: 0;
+  background: none;
+  color: #ffc49b;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.vitrine__vazio {
+  padding: 40px 20px;
+  border: 1px dashed #c5d3e0;
+  border-radius: var(--raio-medio);
+  color: #444444;
+  text-align: center;
+}
+
+.recentes__titulo {
+  margin: clamp(40px, 6vw, 64px) 0 20px;
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+}
+
+.topo {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--cor-azul-marca);
+  box-shadow: var(--sombra-elevada);
+  color: #ffffff;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.topo:hover {
+  background-color: var(--cor-azul-marca-escuro);
+  transform: translateY(-2px);
+}
+
 /* Em telas de toque o :hover "gruda" depois do toque; desliga os efeitos de elevação */
 @media (hover: none) {
   .btn--laranja:hover,
@@ -1098,6 +1627,8 @@ textarea:focus-visible {
   .categoria-card:hover,
   .rodape__social:hover,
   .galeria__miniatura:hover,
+  .produto-card__favorito:hover,
+  .topo:hover,
   .produto-card:hover .produto-card__imagem img {
     box-shadow: none;
     transform: none;
