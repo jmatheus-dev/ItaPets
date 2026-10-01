@@ -7,6 +7,15 @@
   <title>Ração Premium Cães Adultos 15kg — ItaPets</title>
   <meta name="description"
     content="Ração Quatree Supreme para cães adultos de porte médio e grande, sabor frango e batata doce. Livre de corantes artificiais, em embalagem econômica de 15kg.">
+  <link rel="canonical" href="https://jmatheus-dev.github.io/ItaPets/produtos/racao-premium-caes-adultos-15kg.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ItaPets">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Ração Premium Cães Adultos 15kg — ItaPets">
+  <meta property="og:description" content="Ração Quatree Supreme para cães adultos de porte médio e grande, sabor frango e batata doce. Livre de corantes artificiais, em embalagem econômica de 15kg.">
+  <meta property="og:url" content="https://jmatheus-dev.github.io/ItaPets/produtos/racao-premium-caes-adultos-15kg.html">
+  <meta property="og:image" content="https://jmatheus-dev.github.io/ItaPets/imagens/produtos/racao-premium-caes-adultos-15kg.webp">
+  <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#d7f0fa">
   <link rel="icon" href="../imagens/favicon/icone-site.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="../imagens/favicon/icone-192.png" sizes="192x192">
@@ -20,6 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
     defer></script>
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -29,9 +39,9 @@
     <nav class="container-xl" aria-label="Menu principal">
       <a class="navbar-brand cabecalho__marca py-0" href="../index.html"><img src="../imagens/logo-itapets.webp"
           alt="ItaPets — página inicial"></a>
-      <a class="cabecalho__icone ms-auto order-lg-last" href="#comprar"><img
+      <a class="cabecalho__icone ms-auto order-lg-last" data-abrir="carrinho" href="#comprar"><img
           src="../imagens/icones/carrinho-compras.webp" alt="Carrinho de compras"></a>
-      <a class="cabecalho__icone ms-1 order-lg-last" href="#comprar"><img src="../imagens/icones/favoritos.webp"
+      <a class="cabecalho__icone ms-1 order-lg-last" data-abrir="favoritos" href="#comprar"><img src="../imagens/icones/favoritos.webp"
           alt="Favoritos"></a>
       <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target=".cabecalho__menu"
         aria-controls="menu-principal busca-principal" aria-expanded="false" aria-label="Abrir menu">
@@ -174,19 +184,19 @@
   <footer class="rodape container-xl">
     <nav class="rodape__nav" aria-label="Links do rodapé">
       <section>
-        <h2 class="rodape__titulo">Informações</h2>
+        <h2 class="rodape__titulo">Navegue</h2>
         <ul class="u-lista-limpa">
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#caes">Cães</a>
+            <a class="rodape__link" href="../index.html">Início</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#gatos">Gatos</a>
+            <a class="rodape__link" href="../produtos.html">Todos os produtos</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#higiene">Higiene</a>
+            <a class="rodape__link" href="../produtos.html#caes">Para cães</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../contato.html">Fale Conosco</a>
+            <a class="rodape__link" href="../produtos.html#gatos">Para gatos</a>
           </li>
         </ul>
       </section>
@@ -197,46 +207,44 @@
             <a class="rodape__link" href="../produtos.html#racoes">Rações</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#coleiras">Acessórios</a>
+            <a class="rodape__link" href="../produtos.html#petiscos">Petiscos</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="../produtos.html#coleiras">Coleiras</a>
+          </li>
+          <li class="rodape__item">
+            <a class="rodape__link" href="../produtos.html#comedouros">Comedouros</a>
           </li>
           <li class="rodape__item">
             <a class="rodape__link" href="../produtos.html#higiene">Higiene</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#petiscos">Petiscos</a>
+            <a class="rodape__link" href="../produtos.html#limpeza">Banho e limpeza</a>
           </li>
         </ul>
       </section>
       <section>
-        <h2 class="rodape__titulo">Produtos</h2>
+        <h2 class="rodape__titulo">Minhas Compras</h2>
         <ul class="u-lista-limpa">
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#caes">Cães</a>
+            <a class="rodape__link" href="../produtos.html" data-abrir="carrinho">Meu carrinho</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#gatos">Gatos</a>
+            <a class="rodape__link" href="../produtos.html" data-abrir="favoritos">Meus favoritos</a>
           </li>
           <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#limpeza">Banho</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html#comedouros">Comedouros</a>
+            <a class="rodape__link" href="../contato.html">Fale Conosco</a>
           </li>
         </ul>
       </section>
       <section>
-        <h2 class="rodape__titulo">Minha Conta</h2>
-        <ul class="u-lista-limpa">
-          <li class="rodape__item">
-            <a class="rodape__link" href="../contato.html">Ver meus pedidos</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="../contato.html">Meu perfil</a>
-          </li>
-          <li class="rodape__item">
-            <a class="rodape__link" href="../produtos.html">Favoritos</a>
-          </li>
-        </ul>
+        <h2 class="rodape__titulo">Atendimento</h2>
+        <address class="rodape__contato">
+          <a class="rodape__link" href="tel:+5579900000000">(79) 90000-0000</a>
+          <a class="rodape__link text-break" href="mailto:contato@itapets.com.br">contato@itapets.com.br</a>
+          <span>Seg a Sáb, 8h às 18h</span>
+          <span>Itabaiana, Sergipe</span>
+        </address>
         <ul class="d-flex gap-3 mt-3 u-lista-limpa">
           <li><a class="rodape__social" href="https://www.facebook.com/" aria-label="Facebook"><svg width="22"
                 height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -258,7 +266,7 @@
       </section>
     </nav>
     <p class="rodape__base mb-0">
-      &copy; 2026 ItaPets. Todos os direitos reservados.
+      &copy; <span data-ano>2026</span> ItaPets. Todos os direitos reservados.
     </p>
   </footer>
 </body>
